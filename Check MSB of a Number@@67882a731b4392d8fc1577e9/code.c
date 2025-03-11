@@ -1,12 +1,18 @@
-// Your code here...
 #include <stdio.h>
-int main(){
-    int x;
-    scanf("%d",&x);
-    if(x&1){
-        printf("Set");
-    }else{
-        printf("Not Set");
-    }
+
+int main() {
+    unsigned int num;
+    
+    
+    scanf("%u", &num);
+    
+    unsigned int msb_mask = 1 << 31;
+
+
+    if (num & msb_mask)
+        printf("Set\n");
+    else
+        printf("Not Set\n");
+
     return 0;
 }
